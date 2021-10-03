@@ -1,0 +1,286 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+    font-family: 'Poppins', sans-serif;
+}
+
+#land-page{
+    background-color: #0065C3;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav-collapse,.exit{
+    display: none;
+}
+
+nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+}
+
+.brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.brand b{
+    color: white;
+    font-size: 2rem;
+}
+
+.brand img{
+    width: 80px;
+    margin-right:20px ;
+}
+
+.navbar-nav{
+    display: flex;
+}
+
+.nav-item{
+    list-style-type: none;
+    margin-left: 50px;
+}
+
+.nav-link{
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 100px;
+}
+
+.content-text{
+    width: 50%;
+}
+
+.content-text h2{
+    color: white;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.content-text span{
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.content-text p{
+    font-size: 19px;
+    color: white;
+    font-weight: 100;
+    line-height: 30px;
+}
+
+.content-text a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border-radius: 40px;
+    background-color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    padding:15px 30px;
+    font-weight: bolder;
+    transition: 0.6s  background-color;
+}
+
+.content-text a:hover{
+    background-color: black;
+    color: white;
+}
+
+.content-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    cursor: grab;
+}
+
+.content-img img{
+    max-width: 250px;
+}
+
+.thumb{
+    position: absolute;
+    display: flex;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    cursor: pointer;
+}
+
+.thumb li{
+    display: inline-block;
+    padding: 10px 20px;
+    transition: .3s;
+}
+
+.thumb li:hover{
+    transform: translateY(-25px);
+}
+
+.thumb img{
+    max-width: 45px;
+
+}
+
+.social{
+    position: fixed;
+    right: 4%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.social  li{
+    list-style: none;
+    margin: 15px 0;
+}
+
+.social li img{
+    max-width: 30px;
+    max-height: 35px;
+    filter: invert(1);
+}
+
+
+@media (max-width : 992px){
+
+    nav{
+        padding-left: 50px;
+        padding-right: 50px;
+        
+    }
+
+    .brand img{
+        width: 60px;
+        margin-right:20px ;
+    }
+
+    .nav-collapse{
+        display: block;
+        background-color: none;
+        border: none;
+        color: white;
+        font-size: 40px;
+        position: absolute;
+        right: 8%;
+        padding: 10px 50px;
+    }
+
+
+    .navbar-nav{
+       position: fixed;
+       height: 100%;
+       width: 0vw;
+       transition: .4s ease-in-out;
+       overflow-x: hidden;
+       background-color: rgba(0, 0, 0, 0.856);
+       top: 0;
+       left: 0;
+       z-index: 1;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+
+    .exit{
+        display: block;
+        font-size: 40px;
+        color: white;
+        position: absolute;
+        top: 6%;
+        right: 5%;
+        
+    }
+    
+    .nav-item{
+        margin: 40px 0;
+    }
+    
+    .nav-link{
+        font-size: 2rem;
+        border: white 2px solid;
+        padding: 10px 40px;
+    }
+    
+    
+    .content{
+        padding-left: 50px;
+        padding-right: 100px;
+        flex-direction: column;
+        margin-top: 100px;
+        align-items: flex-start;
+    }
+
+    .content-text{
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    
+    .content-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        cursor: grab;
+        margin-bottom: 150px;
+    }
+
+    .thumb{
+        bottom: 2%;
+        left: 50%;
+        transform: translate(-60%,0%);
+    }
+}
+
+@media (max-width: 450px){
+
+    .nav-collapse{
+        font-size: 1.8rem;
+    }
+ 
+    .content-text h2{
+        font-size: 1.8rem;
+        line-height: auto;
+    }
+    
+    .content-text span{
+        font-size: 3rem;
+    }
+    
+    .content-text p{
+        font-size: 15px;
+        line-height: 25px;
+    }
+    
+    .content-text a{
+        font-size: 12px;
+        border-radius: 40px;
+    }
+
+
+}

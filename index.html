@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepsi</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section id="land-page">
+        <nav>
+            <div class="brand">
+                <a href="#"><img src="images/logo.png" alt=""></a>
+                <b>Pepsi</b>
+            </div>
+
+            <a href="#" class="nav-collapse" onclick="collapse()"><i class="fa fa-bars" aria-hidden="true"></i></a>
+            
+            <div class="nav-option">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="exit" onclick="exit()" href="#"><i class="fa fa-times" aria-hidden="true"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">What's New</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Newsletter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="content">
+            <div class="content-text">
+                <h2>That's What <br> <span>I Like</span></h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, sit laborum quia officia dolores iure suscipit odit vel accusantium. Id similique explicabo iusto aspernatur ipsam quae non qui magni error quo cupiditate illo dolor reiciendis hic modi sapiente deserunt quis, consequuntur eveniet possimus architecto labore rem ut et. Ut, saepe.</p>
+                <a href="#">View all Products</a>
+            </div>
+
+            <div class="content-img">
+                <img src="images/pepsi001.png" alt="">
+            </div>
+
+            <ul class="thumb">
+                <li onclick="imageSlide('pepsi001.png'); chngBgClr('#0065C3')"><img src="images/pepsi001.png" alt="" ></li>
+                <li onclick="imageSlide('pepsi002.png'); chngBgClr('#cf1313')"><img src="images/pepsi002.png" alt="" ></li>
+                <li onclick="imageSlide('pepsi003.png'); chngBgClr('#191919')"><img src="images/pepsi003.png" alt="" ></li>
+            </ul>
+
+            <ul class="social">
+                <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="images/instagram.png" alt=""></a></li>
+                <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        function imageSlide(myPara){
+            document.querySelector('.content-img img').src = "images/"+ myPara ;
+        }
+
+        function chngBgClr(myPara){
+            document.querySelector('#land-page').style.backgroundColor = myPara;
+        }
+
+        function collapse(){
+            document.querySelector('.navbar-nav').style.width = "100vw";
+        }
+
+        function exit(){
+            document.querySelector('.navbar-nav').style.width = "0vw";
+        }
+    </script>
+
+    <!-- https://www.youtube.com/watch?v=s_z5laE4KTw -->
+</body>
+</html>
